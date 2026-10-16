@@ -1,0 +1,2 @@
+import {cors} from './auth.js';
+export default async function handler(req,res){cors(res);if(req.method==='OPTIONS')return res.status(204).end();if(req.method!=='GET')return res.status(405).json({error:'Method not allowed'});const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const anonKey=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;if(!url||!anonKey)return res.status(503).json({error:'Public authentication configuration is unavailable'});return res.status(200).json({url,anonKey})}
