@@ -1,0 +1,11 @@
+@media (max-width: 380px) {
+  .solutions-grid,
+  .feature-list.offer-badges,
+  .cms-grid { grid-template-columns: minmax(0, 1fr); }
+  .solution-content h3 { min-width: 0; flex-wrap: wrap; }
+  .solution-content h3 svg { flex: 0 0 19px; }
+  .solution-content p,
+  .map-link { overflow-wrap: anywhere; }
+  .admin-main { padding-inline: 12px; }
+  .whatsapp-float { max-width: calc(100vw - 24px); }
+}

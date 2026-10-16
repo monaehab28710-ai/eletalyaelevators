@@ -1,0 +1,24 @@
+/* Targeted viewport safeguards; the existing desktop layouts remain unchanged. */
+@media (max-width: 1050px) and (min-width: 721px) {
+  .nav-wrap { gap: 14px; }
+  .nav-wrap nav { gap: 11px; font-size: 11px; }
+  .brand-image { width: 48px; height: 48px; }
+  .nav-cta { padding-inline: 12px; font-size: 10px; }
+}
+@media (max-width: 720px) {
+  body { min-width: 320px; }
+  .contact-form input, .contact-form textarea, .settings-card input, .login-card input,
+  .editor-body input, .editor-body textarea { min-width: 0; max-width: 100%; }
+  .whatsapp-float { bottom: calc(82px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 380px) {
+  .container { width: calc(100% - 28px); }
+  .intro-grid { grid-template-columns: 36px minmax(0, 1fr); gap: 14px; }
+  .intro-mark { min-width: 0; }
+  .admin-top { flex-wrap: wrap; }
+  .admin-top-actions { flex-wrap: wrap; }
+  .form-row { grid-template-columns: minmax(0, 1fr); }
+  .direct-socials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .direct-socials a { min-width: 0; gap: 4px; padding-inline: 4px; font-size: 9px; }
+  .direct-socials svg { flex: 0 0 auto; }
+}
